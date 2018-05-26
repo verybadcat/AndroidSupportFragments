@@ -2,12 +2,15 @@
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.App;
+using Android.Util;
+using Android.Widget;
 
 namespace com.xamarin.sample.fragments.supportlib
 {
 	[Activity(Label = "Fragments Walkthrough", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : FragmentActivity
 	{
+		private LinearLayout MainLayout => FindViewById<LinearLayout>(Resource.Id.main_layout);
 		private TabLayout TabLayout => FindViewById<TabLayout>(Resource.Id.tab_layout);
 
 		private void AddTabs() {
@@ -24,7 +27,11 @@ namespace com.xamarin.sample.fragments.supportlib
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.activity_main);
+      
 			AddTabs();
+			MainLayout.LogStringTree();
+			Log.Debug("AAA", "**********************************************");
+			MainLayout.DelayedLogStringTree();
 
 			//var fragmentManager = SupportFragmentManager;
 			//var transaction = fragmentManager.BeginTransaction();

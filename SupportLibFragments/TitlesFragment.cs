@@ -43,12 +43,10 @@ namespace com.xamarin.sample.fragments.supportlib {
 			intent.SetClass(Activity, typeof(DetailsActivity));
 			intent.PutExtra("current_play_id", playId);
 			StartActivity(intent);
-
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 			var r = base.OnCreateView(inflater, container, savedInstanceState);
-			r.Background = new ColorDrawable (Android.Graphics.Color.Red);
 			return r;
 		}
 	}

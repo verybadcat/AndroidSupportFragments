@@ -1,7 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+
+      xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:theme="@style/Theme.TabBar"/>
   <fragment class="com.xamarin.sample.fragments.supportlib.TitlesFragment"
             android:id="@+id/titles_fragment"
             android:layout_width="fill_parent"

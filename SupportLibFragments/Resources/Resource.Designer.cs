@@ -2763,7 +2763,7 @@ namespace com.xamarin.sample.fragments.supportlib
 			public const int tabMode = 2131165215;
 			
 			// aapt resource value: 0x7f07008b
-			public const int tabs = 2131165323;
+			public const int tab_layout = 2131165323;
 			
 			// aapt resource value: 0x7f070019
 			public const int tag_transition_group = 2131165209;

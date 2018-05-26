@@ -25,6 +25,11 @@ namespace com.xamarin.sample.fragments.supportlib
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.activity_main);
 			AddTabs();
+
+			//var fragmentManager = SupportFragmentManager;
+			//var transaction = fragmentManager.BeginTransaction();
+			//transaction.Add(new TitlesFragment(), "Titles");
+			//transaction.Commit();
 		}
 	}
 }

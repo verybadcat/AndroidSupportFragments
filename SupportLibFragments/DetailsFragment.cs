@@ -29,18 +29,18 @@ namespace com.xamarin.sample.fragments.supportlib
                 // Currently in a layout without a container, so no reason to create our view.
                 return null;
             }
-
-            var scroller = new ScrollView(Activity);
-            
-            var text = new TextView(Activity);
-            var padding = Convert.ToInt32(TypedValue.ApplyDimension(ComplexUnitType.Dip, 4, Activity.Resources.DisplayMetrics));
+            var inflatedView = new FrameLayout(this.Activity);
+            inflatedView.SetBackgroundColor(Android.Graphics.Color.Orange);
+            var text = new TextView(this.Context);
+            text.Text = "Hello ";
+            inflatedView.AddView(text);
+            var padding = 10;
             text.SetPadding(padding, padding, padding, padding);
             text.TextSize = 24;
             text.Text = Shakespeare.Dialogue[ShownPlayId];
 
-            scroller.AddView(text);
 
-            return scroller;
+            return inflatedView;
         }
     }
 }

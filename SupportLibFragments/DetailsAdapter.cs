@@ -1,13 +1,11 @@
-﻿using System;
-using System.Linq;
-using Android.Content;
-using Android.Runtime;
-using Android.Support.Design.Widget;
+﻿using Android.Support.Design.Widget;
 using Android.Support.V4.App;
 using Java.Lang;
+using System.Linq;
 
-namespace com.xamarin.sample.fragments.supportlib {
-	public class DetailsAdapter: FragmentPagerAdapter {
+namespace com.xamarin.sample.fragments.supportlib
+{
+    public class DetailsAdapter: FragmentPagerAdapter {
 		public DetailsAdapter(FragmentManager manager): base(manager) {
     }
 

@@ -1,8 +1,5 @@
-using System;
-
 using Android.OS;
 using Android.Support.V4.App;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 
@@ -26,19 +23,16 @@ namespace com.xamarin.sample.fragments.supportlib
         {
             if (container == null)
             {
-                // Currently in a layout without a container, so no reason to create our view.
                 return null;
             }
             var inflatedView = new FrameLayout(this.Activity);
             inflatedView.SetBackgroundColor(Android.Graphics.Color.Orange);
             var text = new TextView(this.Context);
-            text.Text = "Hello ";
             inflatedView.AddView(text);
             var padding = 10;
             text.SetPadding(padding, padding, padding, padding);
             text.TextSize = 24;
-            text.Text = Shakespeare.Dialogue[ShownPlayId];
-
+            text.Text = Shakespeare.Dialogue[ShownPlayId]; // just returns a bunch of text
 
             return inflatedView;
         }

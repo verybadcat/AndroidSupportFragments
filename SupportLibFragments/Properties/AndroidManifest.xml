@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
-	<application android:icon="@drawable/icon"></application>
+	<application android:icon="@drawable/icon">
+    <activity
+      android:name="com.xamarin.sample.fragments.supportlib.MainActivity"
+      android:label="Fragments Walkthrough"
+      android:icon="@drawable/icon"
+      android:configChanges="orientation|screenSize">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+
+
+      </intent-filter>
+    </activity>
+  </application>
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
 </manifest>
